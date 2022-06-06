@@ -30,13 +30,13 @@ class _LoginScreenState extends State<LoginScreen> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.blue.shade900,
+      backgroundColor: Color.fromRGBO(0,76,63,1),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(220),
+        preferredSize: Size.fromHeight(270),
         child:Column(
           children: [
             Container(
-                color: Colors.white,
+                color: Color.fromRGBO(0,76,63,1),
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 50),
                       child: SizedBox(
-                        child: Image.asset("images/logo-login.png",color: Color(0xFF000033), height: 180, width: 180,),
+                        child: Image.asset("images/umobile-horizontal.jpg", height: 210, width: 210,),
                       ),
                     )
 
@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
               alignment: Alignment.center,
               width: size.width / 1.1,
               child: Text(
-                "Bem Vindo ao Uniapp",
+                "Bem Vindo ao DevMobile",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -214,7 +214,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Text(
             "Login",
             style: TextStyle(
-              color: Colors.blue.shade900,
+              color: Color.fromRGBO(0,76,63,1),
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -222,25 +222,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget field(
-      Size size, String hintText, IconData icon, TextEditingController cont) {
-    return Container(
-      height: size.height / 14,
-      width: size.width / 1.1,
-      child: TextField(
-        style: TextStyle(color: Colors.white),
-        controller: cont,
-        decoration: InputDecoration(
-          prefixIcon: Icon(icon),
-          hintText: hintText,
-          hintStyle: TextStyle(color: Colors.white),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-        ),
-      ),
-    );
-  }
     Widget buildToast() => Container(
       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
       decoration: BoxDecoration(

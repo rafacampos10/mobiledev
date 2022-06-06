@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:mobiledev/pages/PageView/details_curso_mentoria.dart';
 
 class OnePage extends StatefulWidget {
   const OnePage({Key? key}) : super(key: key);
 
   @override
   State<OnePage> createState() => _OnePageState();
-
-
 }
 
 class _OnePageState extends State<OnePage> {
-
   @override
   void initState() {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade900,
+      backgroundColor: Color.fromRGBO(0, 76, 63, 1),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -42,68 +39,39 @@ class _OnePageState extends State<OnePage> {
                     ), //Imagem 0
 
                     Container(
-                      margin: EdgeInsets.symmetric(vertical:32,horizontal: 5),
-                      child: Center(
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "images/30k-banner.png",
-                              color: Colors.white,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),//Imagem 1
-
-                    Container(
-                      margin: EdgeInsets.only(top: 59,left: 20,right: 20),
-                      child: Center(
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "images/altaperformance-banner.png",
-                              color: Colors.white,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-
-                    Container(
+                      width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
                         image: DecorationImage(
-                          image: AssetImage("images/bling.png"),
+                          image: AssetImage("images/umobile-horizontal.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
-                    ),//Imagem 3
+                    ), //Imagem 1
 
                     Container(
-                      margin: EdgeInsets.only(top: 48.5,left: 20,right: 20),
+                      margin: EdgeInsets.only(top: 59, left: 20, right: 20),
                       child: Center(
                         child: Column(
                           children: [
                             Image.asset(
-                                "images/mentoria-banner-atualizado.png",
+                              "images/aplicativo.png",
+                              height: 100,
                             ),
                           ],
                         ),
                       ),
-                    ),//Imagem 4
-
+                    ),
                   ],
-                    options:
-                CarouselOptions(
-                  height: 200.0,
-                  enlargeCenterPage: true,
-                  autoPlay: true,
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enableInfiniteScroll: true,
-                  autoPlayAnimationDuration: Duration(milliseconds: 600),
-                  viewportFraction: 0.8,
-                ),
+                  options: CarouselOptions(
+                    height: 200.0,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enableInfiniteScroll: true,
+                    autoPlayAnimationDuration: Duration(milliseconds: 600),
+                    viewportFraction: 0.8,
+                  ),
                 ),
               ],
             ),
@@ -113,10 +81,10 @@ class _OnePageState extends State<OnePage> {
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 162),
+                  margin: EdgeInsets.symmetric(horizontal: 100),
                   child: Center(
                     child: Text(
-                      "Cursos",
+                      "Projetos Realizados",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -126,62 +94,112 @@ class _OnePageState extends State<OnePage> {
                 ),
               ],
             ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              height: 100,
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset("images/bling.png", width: 80),
-                  Image.asset(
-                    "images/30k.png",
-                    width: 80,
-                    color: Colors.white,
-                  ),
-                  Image.asset(
-                    "images/altaperformance.png",
-                    width: 80,
-                    color: Colors.white,
-                  ),
-                  Image.asset(
-                    "images/mentoria.png",
-                    width: 80,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MentoriaDetails()));
+              },
+              child: Card(
+                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  color: Color.fromRGBO(125, 213, 87, 1),
+                  child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'images/uniapp.png',
+                              width: 150,
+                              height: 150,
+                            ),
+                            Expanded(
+                              child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 16, vertical: 40),
+                                  child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("UniApp",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white)),
+                                      ])),
+                            ),
+                          ]))),
             ),
-            SizedBox(
-              height: 20,
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MentoriaDetails()));
+              },
+              child: Card(
+                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  color: Color.fromRGBO(125, 213, 87, 1),
+                  child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'images/service.jpg',
+                              width: 150,
+                              height: 150,
+                            ),
+                            Expanded(
+                              child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 16, vertical: 40),
+                                  child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Client-Server",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white)),
+                                      ])),
+                            ),
+                          ]))),
             ),
-            Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 160),
-                  child: Center(
-                    child: Text(
-                      "Eventos",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              height: 100,
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset("images/logo-login.png", width: 100),
-                  Image.asset("images/logo-login.png", width: 100),
-                  Image.asset("images/logo-login.png", width: 100),
-                ],
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MentoriaDetails()));
+              },
+              child: Card(
+                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  color: Color.fromRGBO(125, 213, 87, 1),
+                  child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'images/logo-login.png',
+                              width: 150,
+                              height: 150,
+                            ),
+                            Expanded(
+                              child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 16, vertical: 40),
+                                  child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Veículo Autônomo",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white)),
+                                      ])),
+                            ),
+                          ]
+                      )
+                  )
               ),
             ),
           ],
@@ -190,4 +208,3 @@ class _OnePageState extends State<OnePage> {
     );
   }
 }
-

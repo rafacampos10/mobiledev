@@ -63,13 +63,34 @@ class _roomDirectState extends State<roomDirect> {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) => scrollToBottom());
     final size = MediaQuery.of(context).size;
+    String uid = _auth.currentUser!.uid;
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.blue.shade900,
-        centerTitle: true,
-        title: Text(widget.directName),
+        title: StreamBuilder<DocumentSnapshot>(
+          stream:
+          _firestore.collection("usuarios").doc(uid).snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.data != null) {
+              return Container(
+                margin: EdgeInsets.symmetric(horizontal: 100),
+                child: Column(
+                  children: [
+                    Text(widget.directName,style: TextStyle(color: Colors.white)),
+                    Text(
+                      snapshot.data!['status'],
+                      style: TextStyle(fontSize: 14,color: Colors.white),
+                    ),
+                  ],
+                ),
+              );
+            } else {
+              return Container();
+            }
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -110,13 +131,13 @@ class _roomDirectState extends State<roomDirect> {
               width: size.width,
               alignment: Alignment.center,
               child: Container(
-                height: size.height / 10,
+                //height: size.height / 10,
                 width: size.width / 1.1,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      height: size.height / 10,
+                      //height: size.height / 10,
                       width: size.width / 1.3,
                       child: TextField(
                         expands: true,
@@ -158,6 +179,7 @@ class _roomDirectState extends State<roomDirect> {
         child: Text(
           map['message'],
           softWrap: true,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w500,

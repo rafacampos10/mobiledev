@@ -14,7 +14,7 @@ class Logo extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(2.0),
         child: Image(
-            image: AssetImage('images/logo-login.png'), fit: BoxFit.fitWidth),
+            image: AssetImage('images/aplicativo.png'), fit: BoxFit.fitWidth),
       ),
     );
   }

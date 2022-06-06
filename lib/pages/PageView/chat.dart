@@ -12,7 +12,7 @@ class Chat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlurImagePageScaffold(
-      imagePath: "images/bg.jpg",
+      imagePath: "images/aplicativo.png",
       body: [
         Logo(height: 150.0, width: 150.0, radius: 50.0),
         Text("Bem vindo",

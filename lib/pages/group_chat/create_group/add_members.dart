@@ -83,6 +83,7 @@ class _AddMembersInGroupState extends State<AddMembersInGroup> {
   void onResultTap() {
     bool isAlreadyExist = false;
 
+
     for (int i = 0; i < membersList.length; i++) {
       if (membersList[i]['uid'] == userMap!['uid']) {
         isAlreadyExist = true;

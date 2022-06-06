@@ -39,7 +39,7 @@ class _AddMembersINGroupState extends State<AddMembersINGroup> {
 
     await _firestore
         .collection('usuarios')
-        .where("name", isEqualTo: _search.text)
+        .where('email',isEqualTo: _search.text)
         .get()
         .then((value) {
       setState(() {
@@ -69,7 +69,7 @@ class _AddMembersINGroupState extends State<AddMembersINGroup> {
 
   void onAddMembers() async {
     bool isAlreadyExist = false;
-
+    membersList.add(userMap);
     for (int i = 0; i < membersList.length; i++) {
       if (membersList[i]['uid'] == userMap!['uid']) {
         isAlreadyExist = true;
@@ -90,7 +90,6 @@ class _AddMembersINGroupState extends State<AddMembersINGroup> {
           "uid": userMap!['uid'],
           "isAdmin": userMap!['isAdmin'],
         });
-
         fToast.showToast(
           child: memberAdd(),
           toastDuration: Duration(seconds: 2),
@@ -152,7 +151,6 @@ class _AddMembersINGroupState extends State<AddMembersINGroup> {
                 ),
               ],
             ),
-
             userMap != null
                 ? ListTile(
               onTap: onAddMembers,
