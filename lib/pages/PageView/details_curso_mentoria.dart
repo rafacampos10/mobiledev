@@ -14,8 +14,8 @@ class _MentoriaDetailsState extends State<MentoriaDetails> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.blue.shade900,
+        backgroundColor: Color.fromRGBO(0,76,63,1),
+        foregroundColor: Colors.white,
         actions: [
           Container(
             margin: EdgeInsets.only(left: 135, right: 165, top: 5),
@@ -24,7 +24,6 @@ class _MentoriaDetailsState extends State<MentoriaDetails> {
                 children: [
                   Image.asset(
                       "images/aplicativo.png",
-                      color: Colors.blue.shade900,
                       height: 40,
                       width: 35),
                 ],

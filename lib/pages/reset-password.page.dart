@@ -24,7 +24,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.blue.shade900,
+        color: Color.fromRGBO(0,76,63,1),
         child: ListView(
           children: <Widget>[
             Column(
@@ -36,7 +36,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                       SizedBox(
                         width: 200,
                         height: 200,
-                        child: Image.asset("images/logo-login.png"),
+                        child: Image.asset("images/umobile-horizontal.jpg"),
                       ),
                       SizedBox(
                         height: 10,
@@ -115,7 +115,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                             child: Text(
                               "Recuperar a Senha",
                               style: TextStyle(
-                                color: Colors.blue.shade900,
+                                color: Color.fromRGBO(0,76,63,1),
                                 fontSize: 20,
                               ),
                               textAlign: TextAlign.center,

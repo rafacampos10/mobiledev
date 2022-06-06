@@ -157,7 +157,7 @@ class _perfilPageState extends State<perfilPage> {
                                                 fontSize: 18,
                                               ),
                                             ),
-                                            leading: Icon(Icons.apartment,color: azul),
+                                            leading: Icon(Icons.location_on,color: azul),
                                           ),
                                           ListTile(
                                             title: Text((snapshot.data != null)
@@ -171,7 +171,7 @@ class _perfilPageState extends State<perfilPage> {
                                                 color: azul,
                                               ),
                                             ),
-                                            leading: Icon(Icons.location_on,color: azul,),
+                                            leading: Icon(Icons.apartment,color: azul,),
                                           ),
                                         ],
                                       ),

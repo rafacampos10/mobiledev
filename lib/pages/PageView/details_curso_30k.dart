@@ -14,8 +14,8 @@ class _trintakDetailsState extends State<trintakDetails> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.blue.shade900,
+        backgroundColor: Color.fromRGBO(0,76,63,1),
+        foregroundColor: Colors.white,
 
         actions: [
           Container(
@@ -25,7 +25,6 @@ class _trintakDetailsState extends State<trintakDetails> {
                 children: [
                   Image.asset(
                       "images/aplicativo.png",
-                      color: Colors.blue.shade900,
                       height: 40,
                       width: 35),
                 ],

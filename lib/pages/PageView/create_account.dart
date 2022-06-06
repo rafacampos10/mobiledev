@@ -29,7 +29,7 @@ class _CreateAccountState extends State<CreateAccount> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.blue.shade900,
+      backgroundColor: Color.fromRGBO(0,76,63,1),
       body: isLoading
           ? Center(
         child: Container(
@@ -132,7 +132,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       },
                     decoration: InputDecoration(
                       suffixIcon: Icon(
-                        Icons.apartment,
+                        Icons.location_on,
                         color: Colors.white,
                       ),
                       labelText:"Endereço:",
@@ -164,7 +164,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       },
                     decoration: InputDecoration(
                       suffixIcon: Icon(
-                        Icons.location_on,
+                        Icons.apartment,
                         color: Colors.white,
                       ),
                       labelText:"Cidade:",
@@ -382,7 +382,7 @@ class _CreateAccountState extends State<CreateAccount> {
           child: Text(
             "Criar conta",
             style: TextStyle(
-              color: Colors.blue.shade900,
+              color: Color.fromRGBO(0,76,63,1),
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),

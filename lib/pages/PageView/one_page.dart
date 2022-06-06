@@ -116,7 +116,7 @@ class _OnePageState extends State<OnePage> {
                             Expanded(
                               child: Padding(
                                   padding: EdgeInsets.symmetric(
-                                      horizontal: 16, vertical: 40),
+                                      horizontal: 16, vertical: 60),
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -151,7 +151,7 @@ class _OnePageState extends State<OnePage> {
                             Expanded(
                               child: Padding(
                                   padding: EdgeInsets.symmetric(
-                                      horizontal: 16, vertical: 40),
+                                      horizontal: 16, vertical: 60),
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -186,7 +186,7 @@ class _OnePageState extends State<OnePage> {
                             Expanded(
                               child: Padding(
                                   padding: EdgeInsets.symmetric(
-                                      horizontal: 16, vertical: 40),
+                                      horizontal: 16, vertical: 60),
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
