@@ -124,7 +124,7 @@ class _GroupChatHomeScreenState extends State<GroupChatHomeScreen> {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue.shade900,
+          backgroundColor: Color.fromRGBO(0, 76, 63, 1),
           centerTitle: true,
           title: Text("Conversas", style: TextStyle(color: Colors.white)),
         ),
@@ -143,7 +143,7 @@ class _GroupChatHomeScreenState extends State<GroupChatHomeScreen> {
                       ),
                     ),
                   ),
-                  leading: Icon(Icons.group, color: Colors.blue.shade900),
+                  leading: Icon(Icons.group, color: Color.fromRGBO(0, 76, 63, 1)),
                   title: Text(groupList[index]['name']),
                 );
               },
@@ -181,14 +181,14 @@ class _GroupChatHomeScreenState extends State<GroupChatHomeScreen> {
                               },
                               trailing: Icon(
                                 Icons.delete,
-                                color: Colors.blue.shade900,
+                                color: Color.fromRGBO(0, 76, 63, 1),
                               ),
                               onLongPress: () => showDialogBox(index),
                               leading: SvgPicture.string(
                                   """<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
                         </svg>""",
-                                  color: Colors.blue.shade900,
+                                  color: Color.fromRGBO(0, 76, 63, 1),
                                   height: 24,
                                   width: 24),
                               title: Text(chatList[index]['friend']),
@@ -211,16 +211,16 @@ class _GroupChatHomeScreenState extends State<GroupChatHomeScreen> {
                 );
               }
               return SpeedDial(
-                  backgroundColor: Colors.blue.shade900,
+                  backgroundColor: Color.fromRGBO(0, 76, 63, 1),
                   animatedIcon: AnimatedIcons.menu_close,
                   children: [
                     snapshot.data!['isChecked']
                         ? SpeedDialChild(
-                            backgroundColor: Colors.blue.shade900,
+                            backgroundColor: Color.fromRGBO(0, 76, 63, 1),
                             child: Icon(Icons.search, color: Colors.white),
                             label: "Pesquisar participantes",
                             labelStyle: TextStyle(color: Colors.white),
-                            labelBackgroundColor: Colors.blue.shade900,
+                            labelBackgroundColor: Color.fromRGBO(0, 76, 63, 1),
                             onTap: () => Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (_) => HomeChat(),
@@ -230,7 +230,7 @@ class _GroupChatHomeScreenState extends State<GroupChatHomeScreen> {
                         : SpeedDialChild(),
                     snapshot.data!['isAdmin']
                         ? SpeedDialChild(
-                            backgroundColor: Colors.blue.shade900,
+                            backgroundColor: Color.fromRGBO(0, 76, 63, 1),
                             child: SvgPicture.string(
                                 """<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
@@ -238,7 +238,7 @@ class _GroupChatHomeScreenState extends State<GroupChatHomeScreen> {
                                 color: Colors.white, height: 24, width: 24),
                             label: "Criar Grupos",
                             labelStyle: TextStyle(color: Colors.white),
-                            labelBackgroundColor: Colors.blue.shade900,
+                            labelBackgroundColor: Color.fromRGBO(0, 76, 63, 1),
                             onTap: () => Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (_) => AddMembersInGroup(),

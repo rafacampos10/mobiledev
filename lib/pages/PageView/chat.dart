@@ -18,18 +18,23 @@ class Chat extends StatelessWidget {
         Text("Bem vindo",
             style:
             TextStyle(color: Colors.white, fontSize: 60)),
-        Column(
-          children: [
-            Text("Chat do UniApp - ",
-                style: TextStyle(
-                    color: Colors.white, fontSize: 20)),
-            Text("Fale diretamente com seus consultores",
-                style: TextStyle(
-                    color: Colors.white, fontSize: 20)),
-            Text("e seus grupos de cursos",
-                style: TextStyle(
-                    color: Colors.white, fontSize: 20))
-          ],
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("UTMobile Messanger - ",
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 20)),
+              Text("Fale diretamente com seus colegas de trabalho e seus grupos de setores",
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 20)),
+              Text("",
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 20))
+            ],
+          ),
+
         ),
         LetsStart(onPressed: () {
           Navigator.push(

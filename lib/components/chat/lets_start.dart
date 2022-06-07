@@ -11,13 +11,13 @@ class LetsStart extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(CupertinoIcons.right_chevron,
-              color: CupertinoColors.white),
           Text("Vamos Começar",
               style: TextStyle(
                 color: CupertinoColors.white,
                 fontSize: 25,
-              ))
+              )),
+          Icon(CupertinoIcons.right_chevron,
+              color: CupertinoColors.white),
         ],
       ),
     );
