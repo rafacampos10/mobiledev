@@ -8,7 +8,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Color.fromRGBO(0,76,63,1),
-      padding: const EdgeInsets.only(top: 250.0),
+      padding: const EdgeInsets.only(top: 180.0),
       child: Column(children: [
         Image.asset(
           "images/umobile-horizontal.jpg",

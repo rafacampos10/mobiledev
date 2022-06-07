@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:mobiledev/pages/PageView/details_curso_mentoria.dart';
+import 'package:mobiledev/pages/PageView/details-auto.dart';
+import 'package:mobiledev/pages/PageView/details-client.dart';
+import 'package:mobiledev/pages/PageView/details-uniapp.dart';
 
 class OnePage extends StatefulWidget {
   const OnePage({Key? key}) : super(key: key);
@@ -97,9 +99,12 @@ class _OnePageState extends State<OnePage> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MentoriaDetails()));
+                    MaterialPageRoute(builder: (context) => uniappDetails()));
               },
               child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
                   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   color: Color.fromRGBO(125, 213, 87, 1),
                   child: Padding(
@@ -132,9 +137,12 @@ class _OnePageState extends State<OnePage> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MentoriaDetails()));
+                    MaterialPageRoute(builder: (context) => clientDetails()));
               },
               child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
                   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   color: Color.fromRGBO(125, 213, 87, 1),
                   child: Padding(
@@ -167,9 +175,12 @@ class _OnePageState extends State<OnePage> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MentoriaDetails()));
+                    MaterialPageRoute(builder: (context) => autoDetails()));
               },
               child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
                   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   color: Color.fromRGBO(125, 213, 87, 1),
                   child: Padding(

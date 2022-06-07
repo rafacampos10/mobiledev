@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class trintakDetails extends StatefulWidget {
-  const trintakDetails({Key? key}) : super(key: key);
+class uniappDetails extends StatefulWidget {
+  const uniappDetails({Key? key}) : super(key: key);
 
   @override
-  State<trintakDetails> createState() => _trintakDetailsState();
+  State<uniappDetails> createState() => _uniappDetailsState();
 }
 
-class _trintakDetailsState extends State<trintakDetails> {
+class _uniappDetailsState extends State<uniappDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

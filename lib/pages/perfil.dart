@@ -21,8 +21,8 @@ class perfilPage extends StatefulWidget {
 class _perfilPageState extends State<perfilPage> {
 
   FirebaseAuth _auth = FirebaseAuth.instance;
-  final Color azul = Colors.blue.shade900;
-  final Color branco = Colors.white;
+  final Color escuro = Color.fromRGBO(0, 76, 63, 1);
+  final Color verde = Color.fromRGBO(125, 213, 87, 1);
   var authUser;
   final fToast = FToast();
 
@@ -60,7 +60,7 @@ class _perfilPageState extends State<perfilPage> {
         .collection("usuarios");
 
     return Scaffold(
-      backgroundColor: azul,
+      backgroundColor: escuro,
       body: StreamBuilder<DocumentSnapshot>(
         stream: _usersStream.doc(uid).snapshots(),
         builder: (BuildContext context,AsyncSnapshot<DocumentSnapshot> snapshot){
@@ -74,7 +74,7 @@ class _perfilPageState extends State<perfilPage> {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height/1.6,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: verde,
                     ),
                     child: Column(
                       children: <Widget>[
@@ -83,7 +83,7 @@ class _perfilPageState extends State<perfilPage> {
                           child:
                           CircleAvatar(
                             radius: (52),
-                            backgroundColor: azul,
+                            backgroundColor: escuro,
                             child: FittedBox(
                               alignment: Alignment.center,
                               clipBehavior: Clip.none,
@@ -104,7 +104,7 @@ class _perfilPageState extends State<perfilPage> {
                                 child: ListTile(
                                   title: Text(snapshot.data!['name'],
                                     style: TextStyle(
-                                      color: azul,
+                                      color: escuro,
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -120,12 +120,12 @@ class _perfilPageState extends State<perfilPage> {
                                     ListTile(
                                       title: Text(snapshot.data!['email'],
                                         style: TextStyle(
-                                          color: azul,
+                                          color: escuro,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18,
                                         ),
                                       ),
-                                      leading: Icon(Icons.email,color: azul),
+                                      leading: Icon(Icons.email,color: escuro),
                                     ),
                                     Container(
                                       child: Column(
@@ -137,14 +137,14 @@ class _perfilPageState extends State<perfilPage> {
                                                 : "")
                                                 : "",
                                               style: TextStyle(
-                                                color: azul,
+                                                color: escuro,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18,
                                               ),
                                             ),
-                                            leading: Icon(Icons.phone, color: azul),
+                                            leading: Icon(Icons.phone, color: escuro),
                                           ),
-                                          ListTile(
+                                          /*ListTile(
                                             title: Text((snapshot.data != null)
                                                 ? ((snapshot.data!['endereco'] != null)
                                                 ? snapshot.data!['endereco']
@@ -158,7 +158,7 @@ class _perfilPageState extends State<perfilPage> {
                                               ),
                                             ),
                                             leading: Icon(Icons.location_on,color: azul),
-                                          ),
+                                          ),*/
                                           ListTile(
                                             title: Text((snapshot.data != null)
                                                 ? ((snapshot.data!['cidade'] != null)
@@ -168,10 +168,10 @@ class _perfilPageState extends State<perfilPage> {
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18,
-                                                color: azul,
+                                                color: escuro,
                                               ),
                                             ),
-                                            leading: Icon(Icons.apartment,color: azul,),
+                                            leading: Icon(Icons.apartment,color: escuro,),
                                           ),
                                         ],
                                       ),
@@ -187,7 +187,7 @@ class _perfilPageState extends State<perfilPage> {
                           children: [
 
                             Checkbox(
-                              fillColor: MaterialStateProperty.all(azul),
+                              fillColor: MaterialStateProperty.all(escuro),
                               checkColor: Colors.white,
                               onChanged: (bool? value){
                                 snapshot.data!['isChecked'] == value;
@@ -220,7 +220,7 @@ class _perfilPageState extends State<perfilPage> {
                             Text(
                               "Permitir direct?",
                               style: TextStyle(
-                                color: azul,
+                                color: escuro,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -241,7 +241,7 @@ class _perfilPageState extends State<perfilPage> {
                           height: 40,
                           alignment: Alignment.centerLeft,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: verde,
                             borderRadius: BorderRadius.all(
                               Radius.circular(5),
                             ),
@@ -252,7 +252,7 @@ class _perfilPageState extends State<perfilPage> {
                               child: Text(
                                 "Alterar Dados",
                                 style: TextStyle(
-                                  color: azul,
+                                  color: escuro,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -276,7 +276,7 @@ class _perfilPageState extends State<perfilPage> {
             const Text ("Houve um erro, tente novamente");
           }
           return Center(
-            child: CircularProgressIndicator(color: branco),
+            child: CircularProgressIndicator(color: verde),
           );
         },
       )

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class BlingDetails extends StatefulWidget {
-  const BlingDetails({Key? key}) : super(key: key);
+class autoDetails extends StatefulWidget {
+  const autoDetails({Key? key}) : super(key: key);
 
   @override
-  State<BlingDetails> createState() => _BlingDetailsState();
+  State<autoDetails> createState() => _autoDetailsState();
 }
 
-class _BlingDetailsState extends State<BlingDetails> {
+class _autoDetailsState extends State<autoDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

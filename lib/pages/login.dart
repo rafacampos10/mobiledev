@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 50),
+                      margin: EdgeInsets.symmetric(vertical: 10),
                       child: SizedBox(
                         child: Image.asset("images/umobile-horizontal.jpg", height: 210, width: 210,),
                       ),
@@ -63,13 +63,11 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       )
           : SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
         child: Column(
           children: [
             SizedBox(
-              height: size.height / 20,
-            ),
-            SizedBox(
-              height: size.height / 50,
+              height: size.height / 200,
             ),
             Container(
               alignment: Alignment.center,

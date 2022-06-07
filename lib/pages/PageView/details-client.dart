@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AltaDetails extends StatefulWidget {
-  const AltaDetails({Key? key}) : super(key: key);
+class clientDetails extends StatefulWidget {
+  const clientDetails({Key? key}) : super(key: key);
 
   @override
-  State<AltaDetails> createState() => _AltaDetailsState();
+  State<clientDetails> createState() => _clientDetailsState();
 }
 
-class _AltaDetailsState extends State<AltaDetails> {
+class _clientDetailsState extends State<clientDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

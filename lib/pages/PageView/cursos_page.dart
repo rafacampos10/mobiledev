@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mobiledev/pages/PageView/details_curso_30k.dart';
-import 'package:mobiledev/pages/PageView/details_curso_alta.dart';
-import 'package:mobiledev/pages/PageView/details_curso_bling.dart';
-import 'package:mobiledev/pages/PageView/details_curso_mentoria.dart';
+import 'package:mobiledev/pages/PageView/details-auto.dart';
+import 'package:mobiledev/pages/PageView/details-client.dart';
+import 'package:mobiledev/pages/PageView/details-uniapp.dart';
 
 class CursosPage extends StatefulWidget {
   const CursosPage({Key? key}) : super(key: key);
@@ -16,28 +15,32 @@ class _CursosPageState extends State<CursosPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue.shade900,
+        backgroundColor: Color.fromRGBO(0, 76, 63, 1),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //Curso Bling
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 35,vertical: 10),
               width: MediaQuery.of(context).size.width,
-              height: 150,
+              height: 120,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
-                image: DecorationImage(
-                  image: AssetImage("images/bling.png"),
-                  fit: BoxFit.cover,
-                ),
+              ),
+              child: Row(
+                children: [
+                  Image.asset(
+                    "images/auto-banner-atualizado.jpg",
+                    width: 340,
+                  ),
+                ],
               ),
             ),
 
             Container(
               height: 35,
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 70,vertical: 10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -51,7 +54,7 @@ class _CursosPageState extends State<CursosPage> {
                   child: Text(
                     "Ver Mais",
                     style: TextStyle(
-                      color: Colors.blue.shade900,
+                      color: Color.fromRGBO(0, 76, 63, 1),
 
                       fontSize: 16,
                     ),
@@ -59,7 +62,7 @@ class _CursosPageState extends State<CursosPage> {
                   ),
                   onPressed: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BlingDetails(),
+                        MaterialPageRoute(builder: (context) => autoDetails(),
                         )
                     );
                   },
@@ -71,21 +74,20 @@ class _CursosPageState extends State<CursosPage> {
 
             //Curso 30k
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 35,vertical: 10),
               width: MediaQuery.of(context).size.width,
-              height: 150,
+              height: 120,
               child: Row(
                 children: [
                  Image.asset(
-                "images/30k.png",
+                "images/service-banner-atualizado.jpg",
                 width: 340,
-                color: Colors.white,
               ),
                 ],
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 70,vertical: 10),
               height: 35,
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
@@ -99,14 +101,14 @@ class _CursosPageState extends State<CursosPage> {
                   child: Text(
                     "Ver Mais",
                     style: TextStyle(
-                      color: Colors.blue.shade900,
+                      color: Color.fromRGBO(0, 76, 63, 1),
                       fontSize: 16,
                     ),
                     textAlign: TextAlign.center,
                   ),
                   onPressed: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => trintakDetails(),
+                        MaterialPageRoute(builder: (context) => clientDetails(),
                         )
                     );
                   },
@@ -118,21 +120,20 @@ class _CursosPageState extends State<CursosPage> {
 
             //Alta Performance
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 35,vertical: 10),
               width: MediaQuery.of(context).size.width,
-              height: 150,
+              height: 120,
               child: Row(
                 children: [
                   Image.asset(
-                    "images/altaperformance-banner.png",
+                    "images/uniapp-banner-atualizado.jpg",
                     width: 340,
-                    color: Colors.white,
                   ),
                 ],
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 70,vertical: 10),
               height: 35,
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
@@ -147,7 +148,7 @@ class _CursosPageState extends State<CursosPage> {
                   child: Text(
                     "Ver Mais",
                     style: TextStyle(
-                      color: Colors.blue.shade900,
+                      color: Color.fromRGBO(0, 76, 63, 1),
 
                       fontSize: 16,
                     ),
@@ -155,55 +156,7 @@ class _CursosPageState extends State<CursosPage> {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => AltaDetails(),
-                        )
-                    );
-                  },
-                ),
-              ),
-            ),
-
-            Divider(color: Colors.white,thickness: 2),
-
-            //Mentoria
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              width: MediaQuery.of(context).size.width,
-              height: 170,
-              child: Row(
-                children: [
-                  Image.asset(
-                    "images/mentoria.png",
-                    width: 340,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 35,
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
-               color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                ),
-              ),
-              child: SizedBox.expand(
-                child: TextButton(
-                  child: Text(
-                    "Ver Mais",
-                    style: TextStyle(
-                      color: Colors.blue.shade900,
-
-                      fontSize: 16,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  onPressed: (){
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MentoriaDetails(),
+                        MaterialPageRoute(builder: (context) => uniappDetails(),
                         )
                     );
                   },
