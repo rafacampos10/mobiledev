@@ -66,9 +66,9 @@ class _roomDirectState extends State<roomDirect> {
     String uid = _auth.currentUser!.uid;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(0, 76, 63, 1),
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade900,
+        backgroundColor: Color.fromRGBO(0, 76, 63, 1),
         title: StreamBuilder<DocumentSnapshot>(
           stream:
           _firestore.collection("usuarios").doc(uid).snapshots(),
@@ -140,20 +140,22 @@ class _roomDirectState extends State<roomDirect> {
                       //height: size.height / 10,
                       width: size.width / 1.3,
                       child: TextField(
+                        style: TextStyle(color: Colors.white),
                         expands: true,
                         maxLines: null,
                         maxLength: 1000,
                         controller: _message,
                         decoration: InputDecoration(
-                            counterStyle: TextStyle(color: Colors.black,fontSize: 15),
+                            counterStyle: TextStyle(color: Colors.white,fontSize: 15),
                             hintText: "Escreva sua mensagem",
+                            hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
                             )),
                       ),
                     ),
                     IconButton(
-                        icon: Icon(Icons.send,color: Colors.blue.shade900), onPressed: onSendMessage),
+                        icon: Icon(Icons.send,color: Color.fromRGBO(125, 213, 87, 1)), onPressed: onSendMessage),
                   ],
                 ),
               ),
@@ -174,7 +176,7 @@ class _roomDirectState extends State<roomDirect> {
         margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Colors.blue.shade900,
+          color: Color.fromRGBO(125, 213, 87, 1),
         ),
         child: Text(
           map['message'],

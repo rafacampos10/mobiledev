@@ -71,9 +71,9 @@ class _GroupChatRoomState extends State<GroupChatRoom> {
     final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(0, 76, 63, 1),
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade900,
+        backgroundColor: Color.fromRGBO(0, 76, 63, 1),
         centerTitle: true,
         title: Text(widget.groupName),
         actions: [
@@ -128,29 +128,29 @@ class _GroupChatRoomState extends State<GroupChatRoom> {
               width: size.width,
               alignment: Alignment.center,
               child: Container(
-                height: size.height / 10,
+
                 width: size.width / 1.1,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      height: size.height / 10,
                       width: size.width / 1.3,
                       child: TextField(
+                        style: TextStyle(color: Colors.white),
                         expands: true,
                         maxLines: null,
-                        maxLength: 1000,
                         controller: _message,
                         decoration: InputDecoration(
-                            counterStyle: TextStyle(color: Colors.black,fontSize: 15),
+                            counterStyle: TextStyle(color: Colors.white,fontSize: 15),
                             hintText: "Escreva sua mensagem",
+                            hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
                             )),
                       ),
                     ),
                     IconButton(
-                        icon: Icon(Icons.send,color: Colors.blue.shade900), onPressed: onSendMessage),
+                        icon: Icon(Icons.send,color: Color.fromRGBO(125, 213, 87, 1)), onPressed: onSendMessage),
                   ],
                 ),
               ),
@@ -174,7 +174,7 @@ class _GroupChatRoomState extends State<GroupChatRoom> {
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: Colors.blue.shade900,
+                color: Color.fromRGBO(125, 213, 87, 1),
               ),
               child: Column(
                 children: [
@@ -224,7 +224,7 @@ class _GroupChatRoomState extends State<GroupChatRoom> {
             margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              color: Colors.blue.shade900,
+              color: Color.fromRGBO(125, 213, 87, 1),
             ),
             child: Text(
               chatMap['message'],

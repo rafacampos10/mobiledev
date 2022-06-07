@@ -166,21 +166,6 @@ class _HomeChatState extends State<HomeChat> with WidgetsBindingObserver {
                 ),
               ],
             ),
-            Container(
-              child: CupertinoActionSheet(
-                cancelButton: CupertinoActionSheetAction(
-                    isDefaultAction: true,
-                    isDestructiveAction: true,
-                    child: Text('Limpar busca',
-                      style: TextStyle(color: Colors.blue.shade900),),
-                    onPressed: () {
-                      Navigator.push(
-                          context, MaterialPageRoute(builder: (_) => HomeChat())
-                      );
-                    }
-                ),
-              ),
-            ),
 
             userMap != null
                 ? ListTile(
