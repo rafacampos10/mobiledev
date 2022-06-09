@@ -20,9 +20,9 @@ class _CursosPageState extends State<CursosPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Curso Bling
+            //Veiculo autonomo
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 35,vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               width: MediaQuery.of(context).size.width,
               height: 120,
               decoration: BoxDecoration(
@@ -37,7 +37,7 @@ class _CursosPageState extends State<CursosPage> {
                 ],
               ),
             ),
-
+            Text("Veiculo Autônomo",style: TextStyle(color: Colors.white)),
             Container(
               height: 35,
               margin: EdgeInsets.symmetric(horizontal: 70,vertical: 10),
@@ -72,9 +72,9 @@ class _CursosPageState extends State<CursosPage> {
 
             Divider(color: Colors.white,thickness: 2),
 
-            //Curso 30k
+            //Web Client-Service
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 35,vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               width: MediaQuery.of(context).size.width,
               height: 120,
               child: Row(
@@ -86,6 +86,7 @@ class _CursosPageState extends State<CursosPage> {
                 ],
               ),
             ),
+            Text("Web Client-Service",style: TextStyle(color: Colors.white)),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 70,vertical: 10),
               height: 35,
@@ -118,9 +119,9 @@ class _CursosPageState extends State<CursosPage> {
 
             Divider(color: Colors.white,thickness: 2),
 
-            //Alta Performance
+            //UniApp
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 35,vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               width: MediaQuery.of(context).size.width,
               height: 120,
               child: Row(
@@ -132,6 +133,7 @@ class _CursosPageState extends State<CursosPage> {
                 ],
               ),
             ),
+            Text("Aplicativo UniApp",style: TextStyle(color: Colors.white)),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 70,vertical: 10),
               height: 35,

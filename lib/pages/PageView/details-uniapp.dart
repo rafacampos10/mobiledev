@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
 
 class uniappDetails extends StatefulWidget {
   const uniappDetails({Key? key}) : super(key: key);
@@ -35,92 +36,49 @@ class _uniappDetailsState extends State<uniappDetails> {
 
       ),
 
-      backgroundColor: Colors.blue.shade900,
+      backgroundColor: Color.fromRGBO(0,76,63,1),
       body: SingleChildScrollView(
+        physics: ScrollPhysics(),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
       //Curso 30k
       Container(
-        margin: EdgeInsets.symmetric(horizontal: 10),
+        margin: EdgeInsets.symmetric(horizontal: 35),
         width: MediaQuery.of(context).size.width,
-        height: 300,
+        height: 270,
         child: Row(
           children: [
             Image.asset(
-              "images/30k.png",
-              width: 340,
-              color: Colors.white,
+              "images/uniapp.png",
+              width: 320,
             ),
           ],
         ),
       ),
       Container(
-        margin: EdgeInsets.symmetric(horizontal: 10),
-        height: 250,
+        margin: EdgeInsets.symmetric(horizontal: 30),
+        height: MediaQuery.of(context).size.height/2.5,
         width: MediaQuery.of(context).size.width,
         child: Text(
-          "O Curso Mercado Livre Meus Primeiros 30K é um Curso Prático, "
-              "todo em vídeo aulas onde vou te ensinar passo a passo, como"
-              " ter resultados incríveis no maior marketplace do Brasil, "
-              "através de estratégias exclusivas. É exatamente o que você "
-              "precisa para chegar no status de Mercado Líder em cerca de "
-              "6 meses.\n"
-          "Atenção: Na página de compras utilize o mesmo e-mail do aplicativo "
-              "UniApp. ",
+          "O aplicativo UniApp foi desenvolvido, para substituir o telegram da universidade"
+              "para haver conversas entre os grupos de cursos e também os consultores para tirar "
+              "dúvidas e interagir.\n"
+          "As linguagens utilizadas no projeto foram:\n"
+              "- Linguagem Dart\n"
+              "- Framework Flutter\n"
+              "- Banco de dados Firebase\n"
+              "- Design Figma\n",
           style: TextStyle(
             fontSize: 20,
             color: Colors.white,
           ),
-          textAlign: TextAlign.left,
+          textAlign: TextAlign.justify,
         ),
       ),
-      Container(
-        margin: EdgeInsets.symmetric(horizontal: 10),
-        height: 35,
-        alignment: Alignment.centerLeft,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: [0.3, 1],
-            colors: [
-              Colors.blue.shade500,
-              Colors.blue.shade800,
-            ],
-          ),
-          borderRadius: BorderRadius.all(
-            Radius.circular(5),
-          ),
-        ),
-
-        child: SizedBox.expand(
-          child: TextButton(
-            child: Text(
-              "Quero ser Mercado Líder !",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            onPressed: _pagamento30k,
-          ),
-        ),
-      ),
-            ],
-        ),
-      ),
+      ]
+        )
+      )
     );
-  }
-}
-
-_pagamento30k() async{
-  const url = "https://pay.hotmart.com/R12850359P?off=u664k0se&_hi=eyJjaWQiOiIxNjQ0NDExOTU2NDMwNjA5NzYzOTA5MDk4NDk1MDAwIiwiYmlkIjoiMTY0NDQxMTk1NjQzMDYwOTc2MzkwOTA5ODQ5NTAwMCIsInNpZCI6IjY3MGZmNWRmZDFhZDRkNjRiNDVjNWFiNTRiYWI0YmViIn0%3D.1647258759132&checkoutMode=0&bid=1647258757807";
-  if (await canLaunch(url)){
-    await launch(url);
-    print("Realizado com sucesso !");
-  } else{
-    throw "$url não encontrado";
   }
 }

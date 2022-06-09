@@ -33,94 +33,54 @@ class _autoDetailsState extends State<autoDetails> {
           ],
         ),
 
-      backgroundColor: Colors.blue.shade900,
+      backgroundColor: Color.fromRGBO(0,76,63,1),
       body: SingleChildScrollView(
+        physics: ScrollPhysics(),
+        scrollDirection: Axis.vertical,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //Curso Bling
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 35),
               width: MediaQuery.of(context).size.width,
               height: 300,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
-                image: DecorationImage(
-                  image: AssetImage("images/bling.png"),
-                  fit: BoxFit.cover,
-                ),
+        child: Row(
+            children: [
+                Image.asset("images/auto-banner-atualizado.jpg",width: 320),
+        ]
               ),
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 10),
-              height: 320,
               width: MediaQuery.of(context).size.width,
               child: Text(
-                "São mais de 60 aulas com profissionais certificados "
-                    "do Bling descomplicando todos os processos "
-                    "do seu negócio, além de aulas "
-                    "estratégicas com o time da Universidade Marketplaces."
-                    "Participe do Curso Bling Descomplicado e descubra como emitir"
-                    " notas automaticamente, gerenciar seu estoque "
-                    "e integrar ele com os principais marketplaces "
-                    "de forma simples!\n"
-                "Atenção: Na página de compras utilize o mesmo e-mail do aplicativo "
-                "UniApp. ",
+                "O projeto de Veículo Autônomo é um projeto de TCC de Engenharia"
+                    " da Computação da universidade UniMetrocamp.\n"
+                    "O veículo se desloca em ambiente desestruturado, fazendo "
+                    "movimentações autônomas, se dirigindo autonomamente de um "
+                    "ponto a outro do ambiente. O veículo utiliza sensores do "
+                    "tipo ultrassônicos para medir a distância de possíveis obstáculos, "
+                    "podendo desviar-se dos mesmos de forma autônoma, evitando "
+                    "assim colisões.\n"
+                    " Para a implementação do software utilizou-se a plataforma "
+                    "computacional embarcada do tipo Arduino. Foram testados "
+                    "diferentes algoritmos para a identificação e desvio de obstáculos.\n"
+                    " Cada um dos procedimentos de aprendizagem mostra um diferente"
+                    " tipo de mecanismo evolutivo. Experimentos de simulação "
+                    "mostraram que o sistema de desvio de obstáculos é capaz de "
+                    "aprender estratégias de navegações em ambientes "
+                    "desconhecidos, com reduzido custo e tempo computacional.",
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
                 ),
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.justify,
               ),
             ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              height: 35,
-              alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: [0.3, 1],
-                  colors: [
-                    Colors.blue.shade500,
-                    Colors.blue.shade800,
-                  ],
-                ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                ),
-              ),
-
-              child: SizedBox.expand(
-                child: TextButton(
-                  child: Text(
-                    "Quero Descomplicar Agora Minha Integração",
-                    style: TextStyle(
-                      color: Colors.white,
-
-                      fontSize: 16,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  onPressed: _bling,
-                ),
-              ),
-            ), //Curso Bling
           ],
         ),
       ),
     );
-  }
-}
-
-_bling() async {
-  const urlBling =
-      "https://payment.hotmart.com/R55076966E?off=55c2y486&checkoutMode=10&_hi=eyJjaWQiOiIxNjQ0NDExOTU2NDMwNjA5NzYzOTA5MDk4NDk1MDAwIiwiYmlkIjoiMTY0NDQxMTk1NjQzMDYwOTc2MzkwOTA5ODQ5NTAwMCIsInNpZCI6IjY3MGZmNWRmZDFhZDRkNjRiNDVjNWFiNTRiYWI0YmViIn0%3D.1647258870908&bid=1647258869076";
-  if (await canLaunch(urlBling)) {
-    await launch(urlBling);
-    print("Deu Certo !");
-  } else {
-    throw '$urlBling não foi encontrado';
   }
 }
